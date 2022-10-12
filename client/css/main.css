@@ -1,0 +1,95 @@
+body {
+  background-image:url('https://images.unsplash.com/photo-1628583119100-abc1b2198062?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1927&q=80');
+  background-size:cover;
+  background-position-y: center;
+  background-repeat:no-repeat;
+}
+.required {
+  color:red;
+}
+img {
+  width: 259px;
+  height: 180px;
+  object-fit: cover;
+}
+#render-form {
+  background-color: rgb(245, 157, 155);
+  border: 1px sollid darkgray;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  color: rgb(129, 95, 95);
+} 
+button {
+  margin-top: 1rem;
+}
+.card-group {
+  gap:0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  color: rgb(129, 95, 95);
+}
+a {
+  text-decoration: none;
+  color: rgb(129, 95, 95);
+}
+
+a:hover {
+  color:rgb(236, 218, 147);
+}
+
+.logo {
+  height: fit-content;
+  width: auto;
+}
+#logo {
+  height: auto;
+  width: 150px;
+}
+
+/* star rating */
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-outer::before {
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #f8ce0b;
+}
+
+.attribution {
+  font-size: 35px;
+  color: #444;
+  text-decoration: none;
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: -1;
+}
+.attribution:hover {
+  color: #1fa67a;
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    background-position-y: top;
+  }
+  #logo {
+    height: auto;
+    width: 150px;
+  }
+}
