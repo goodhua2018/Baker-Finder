@@ -29,3 +29,5 @@ fetch('/api/sessions')
       renderBakerList()
     }
   })
+
+ 
