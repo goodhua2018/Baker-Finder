@@ -24,13 +24,14 @@ const Reviews = {
 
   findRating: (bakerId) => {
     const sql = `
-    SELECT AVG(rating) FROM reviews 
-    WHERE baker_id = $1
+      SELECT AVG(rating) FROM reviews 
+      WHERE baker_id = $1
     `
     return db
       .query(sql, [bakerId])
       .then(dbRes => dbRes.rows[0])
   },
+
   findEachUserReviews: (userName) => {
     const sql = `
       SELECT * FROM reviews 
@@ -40,14 +41,13 @@ const Reviews = {
       .query(sql, [userName])
       .then(dbRes => dbRes.rows)
   },
+
   delete: reviewId => {
       const sql = `
-          DELETE FROM reviews WHERE id = $1    
+        DELETE FROM reviews WHERE id = $1    
       `
       return db.query(sql, [reviewId])
   }
-  
-
 }
 
 module.exports = Reviews
