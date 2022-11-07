@@ -24,7 +24,7 @@ function renderBakerReviews(bakerRating) {
     <script>
       document.querySelector
     </script>
-`
+  `
   const starTotal = 5;
   const starPercentage = (bakerRating/ starTotal) * 100;
   const starPercentageRounded = `${(Math.round(starPercentage / 10) * 10)}%`;
@@ -32,13 +32,12 @@ function renderBakerReviews(bakerRating) {
 }
 
 function bakerReviews() {
-  // console.log(state.bakerReviews)
   return state.bakerReviews.map(review => `  
     <div class='baker card' >
-    <div class="card-body">
+      <div class="card-body">
         <h5 class="card-title">${review.user_name}</h5>
         <p class="card-text">${review.review}</p>
+      </div>
     </div>
-  </div>
   `).join('')
 }

@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-
 const Reviews = require('../models/review')
 const User = require('../models/user')
 
@@ -21,7 +20,6 @@ router.get('/:bakerId', (req, res) => {
   Reviews
     .findAllReviews(bakerId)
     .then(reviews => res.json(reviews))
-
 })
 
 router.get('/:userName/eachUser', (req, res) => {
@@ -29,18 +27,13 @@ router.get('/:userName/eachUser', (req, res) => {
   Reviews
     .findEachUserReviews(userName)
     .then(reviews => res.json(reviews))
-
 })
 
 router.delete('/:id', (req, res) => {
   const reviewId = req.params.id;
-
-    Reviews
-      .delete(reviewId)
-      .then(() => res.json({ message: 'delete'}))
-  
+  Reviews
+    .delete(reviewId)
+    .then(() => res.json({ message: 'delete'}))
 })
-
-
 
 module.exports = router

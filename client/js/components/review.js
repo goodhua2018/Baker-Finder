@@ -31,12 +31,11 @@ function renderReview(bakerId) {
         </div>
         <button class="btn btn-light border-secondary">Review</button>
       </form>
-  </section>
+    </section>
   `
 }
 
 function reviewBaker(event) {
-   console.log('miao')
   event.preventDefault()
   const form = event.target;
   const data = Object.fromEntries(new FormData(form))
@@ -58,7 +57,10 @@ function reviewBaker(event) {
 
 function renderNote(message) {
   const page = document.querySelector('#page')
-  page.innerHTML =
-    `<h2 class="text-center mt-3" style='color: rgb(129, 95, 95);'>${message}</h2>`
+  page.innerHTML = `
+    <h2 class="text-center mt-3" style='color: rgb(129, 95, 95);'>
+      ${message}
+    </h2>
+  `
 }
 

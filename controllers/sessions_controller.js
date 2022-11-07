@@ -19,13 +19,11 @@ router.post('/', (req, res) => {
   const { email, password } = req.body
 
 User
-.findByEmail(email)
-.then(user => {
-    console.log(user)
+  .findByEmail(email)
+  .then(user => {
     if (email == '' || password == '') {
       res.status(400).json({ error: 'email and/or password cannot be blank' })
     } else {
-      
       if (user) {
         const isValidPassword = bcrypt.compareSync(password, user.password_digest)
         if (isValidPassword) {
