@@ -1,7 +1,7 @@
 # Find Your Baker
   
 
-## :computer: 	[click to see the project](https://baker-finder.herokuapp.com/)
+## :computer: 	[click to see the project](https://baker-finder.onrender.com/)
 
 ## :page_facing_up: About
 - It's a group project where we not only show our technicals and but also apply git and github skills 
